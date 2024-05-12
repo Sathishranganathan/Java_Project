@@ -11,29 +11,28 @@
 <body>
 <div class="container my-2" align="center">
 
-    <h3>Employee List</h3>
-    <a th:href="@{/ems/addnew}" class="btn btn-primary btn-sm mb-3" >Add Employee</a>
+    <h3>Student List</h3>
+    <a th:href="@{/sms/addStudent}" class="btn btn-primary btn-sm mb-3" >Add Student</a>
     <table style="width:80%" border="1"
            class = "table table-striped table-responsive-md">
         <thead>
         <tr>
             <th>ID</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Email</th>
+            <th>Student</th>
+            <th>Gender</th>
             <th>Date of Birth</th>
-            <th>Action</th>
+            <th>Standard</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="employee:${allEmplist}">
-            <td th:text="${employee.id}"></td>
-            <td th:text="${employee.firstName}"></td>
-            <td th:text="${employee.LastName}"></td>
-            <td th:text="${employee.email}"></td>
-            <td th:text="${employee.dob}"></td>
-            <td> <a th:href="@{/ems/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
-                <a th:href="@{/ems/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
+        <tr th:each="student:${studentList}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.gender}"></td>
+            <td th:text="${student.dob}"></td>
+            <td th:text="${student.std}"></td>
+            <td> <a th:href="@{/sms/viewStudent/{id}(id=${student.id})}" class="btn btn-primary">Update</a>
+                <a th:href="@{/sms/deleteStudent/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         </tbody>
