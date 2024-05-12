@@ -27,11 +27,28 @@ public class StudentSrvImpl implements StudentSrv {
      */
     @Override
     public StudentDTO createStudent(StudentDTO studentDTO) {
-        Student student = Student.builder().name(studentDTO.getName())
+        log.info("save method invoked");
+       /* Student student = Student.builder().name(studentDTO.getName())
                 .dob(studentDTO.getDob()).gender(studentDTO.getGender()).std(studentDTO.getStd()).build();
         studentRepository.save(student);
         log.info("Record {} {} created successfully 1", student.getId(), student.getName());
         studentDTO.setId(student.getId());
+        return studentDTO;
+
+*/
+
+        Student existingstudent  = studentRepository.findStudentByName(studentDTO.getName());
+
+        if (existingstudent == null) {
+            Student student = Student.builder().name(studentDTO.getName())
+                    .dob(studentDTO.getDob()).gender(studentDTO.getGender()).std(studentDTO.getStd()).build();
+            studentRepository.save(student);
+            log.info("Record {} {} created successfully 1", student.getId(), student.getName());
+            studentDTO.setId(student.getId());
+            return "Customer added successfully";
+        }
+        else
+            throw new CustomerAlreadyExistsException("Customer already exists!!");
         return studentDTO;
     }
 
@@ -41,7 +58,9 @@ public class StudentSrvImpl implements StudentSrv {
      */
     @Override
     public StudentDTO updateStudent(StudentDTO studentDTO) {
-        return null;
+        Student student = EmployeeMapper.mapToEmployee(studentDTO);
+        studentRepository.save(student);
+        return  this.mapToStudentDTO(employee);
     }
 
     /**
@@ -50,7 +69,10 @@ public class StudentSrvImpl implements StudentSrv {
      */
     @Override
     public StudentDTO deleteStudent(StudentDTO studentDTO) {
-        return null;
+
+        log.info("delete Student Id method invoked");
+        studentRepository.deleteById(studentDTO.getId());
+        return "Student DELETED successfully";
     }
 
     /**
@@ -59,7 +81,11 @@ public class StudentSrvImpl implements StudentSrv {
      */
     @Override
     public StudentDTO getStudentByID(Long id) {
-        return null;
+
+        log.info("getStudentByID method invoked");
+        Student student  = studentRepository.findById(id)
+                .orElseThrow( ()-> new ResourceNotFoundException("Student is not found for the given id" + id));
+        return this.mapToStudentDTO(student);
     }
 
     /**
@@ -67,10 +93,12 @@ public class StudentSrvImpl implements StudentSrv {
      */
     @Override
     public List<StudentDTO> getAllStudents() {
-       // log.info("1");
+        log.info("getAllStudents method invoked");
         List<Student> students = studentRepository.findAll();
-       // log.info("2 {} ", students);
+        log.info("getAllEmployee total : {} ",students.size());
         return students.stream().map(this::mapToStudentDTO).toList();
+
+
     }
 
     private StudentDTO mapToStudentDTO(Student student) {
@@ -78,4 +106,8 @@ public class StudentSrvImpl implements StudentSrv {
         return StudentDTO.builder().id(student.getId()).name(student.getName())
                 .gender(student.getGender()).dob(student.getDob()).std(student.getStd()).build();
     }
+
+
+
+
 }

@@ -1,0 +1,3320 @@
+ 
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+{
+	border:0;
+	outline:0;
+	vertical-align:baseline;
+	background:transparent;
+	margin:0;
+	padding:0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-appearance: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body
+{
+	line-height:1;
+	min-width:105.255em;
+}
+
+nav ul
+{
+	list-style:none;
+	width:auto
+}
+
+blockquote,q
+{
+	quotes:none
+}
+ 
+
+blockquote:before,blockquote:after,q:before,q:after
+{
+	content:none
+}
+
+a
+{
+	vertical-align:baseline;
+	background:transparent;
+	margin:0;
+	padding:0;
+	outline:0;
+}
+
+ins
+{
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none
+}
+
+mark
+{
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold
+}
+
+del
+{
+	text-decoration:line-through
+}
+
+abbr[title],dfn[title]
+{
+	border-bottom:.083em dotted;
+	cursor:help
+}
+
+table
+{
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+hr
+{
+	display:block;
+	height:.083em;
+	border:0;
+	border-top:.083em solid #cccccc;
+	margin:1em 0;
+	padding:0
+}
+/********************************************************************************
+					02.Main layout												*
+********************************************************************************/
+.container
+{
+	width:100%;
+	margin:0 auto
+}
+/*****************  Header *****************************************************/
+.headerBanner
+{
+	height:5.833em;
+	border:1px solid red;
+}
+
+.logo
+{
+	width:18em;
+	height:4.167em;
+	float:left;
+	margin: 0.5em 0 0 0.9em;
+}
+.headerRight
+{
+	position:absolute;
+	right:0px;
+	top: 0em;
+}
+
+.scrollMsg
+{
+	float:left;
+	padding-top:2.083em;
+	width:30%
+}
+
+.userInfo
+{
+	float:right;
+	padding:.2em 1.3em 1.667em 1.667em
+}
+
+.userInfo span.userDetails
+{
+	display:inline-block;
+	padding:0 .417em
+}
+
+.userInfo span.bgNone
+{
+	display:inline-block;
+	padding:0 0 0 .417em
+}
+.headerButtonBlock {
+	float: left;
+	height: 2.5em;
+	min-width: 102.255em;
+	padding: 0.45em 0;
+	top: 0;
+	width: 100%;
+	position: absolute;
+	z-index: 98;
+	display:block;
+	visibility: hidden;
+}
+
+#basicButtons{
+	margin-top: 4px;
+}
+#buttonsBlock {
+    padding: 0px 0.45em;
+    width: 99.4%;
+}	
+/*****************  Vertical Navigation **************************************/
+.MenuBarVertical,nav ul li,.actionBtnContainer .peginationBtnLinks li
+{
+	float:left
+}
+
+ul.MenuBarVertical li ul
+{ 
+	display:none;
+	position:absolute;
+	z-index:5;
+	width:12.909em;
+	float:left;
+	left: 0;
+}
+ul.MenuBarVertical li.icon span
+{
+	padding: 1em 1.7em 0.833em;
+}
+
+ul.MenuBarVertical li ul li
+{
+	display:block;
+	float:none
+}
+
+ul.MenuBarVertical li ul li a
+{
+	display: block;
+    float: none;
+    padding: 1em 0em 1.2em 1em;
+}
+ul.MenuBarVertical li ul li a.subMenuHover{
+	padding-left:7px;
+}
+ul.MenuBarVertical li ul li:last-child a{
+	border-bottom: 0;
+}
+ul.MenuBarVertical li ul li ul
+{
+	margin-left: 12.85em;
+    margin-top: -2.71em;
+    position: absolute;
+} 
+nav{
+	height:2.8em;
+	position:absolute;
+	width:100%;
+	/*min-width:100%; /* 113.364em for tab adjustment */
+	min-width: 102.255em;
+}
+
+.navSearch
+{
+	width:14.4em;
+	margin-top:.3em;
+	float:right
+}
+
+.navSearchL
+{
+	width:10em;
+	float:left
+}
+
+.navSearchL input
+{
+	float:left;
+	height:1.4em;
+	width:100%;
+	padding:.2em
+}
+
+.navSearchL a
+{
+	display:inline-block;
+	height:1.5em;
+	width:2.083em;
+	position:absolute;
+	right:3.2em;
+	top:.5em
+}
+
+.navSearchR
+{
+	width:2.5em;
+	float:right
+}
+
+.navSearchR a
+{
+	display:inline-block;
+	padding-right:.8em;
+	height:2em;
+	width:1.5em
+}
+
+.navSearchR a img
+{
+	display:inline-block;
+	padding-top:.167em;
+	border:0
+}
+
+nav ul li.icon
+{
+	padding: 0.6em 0 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: .75em 2.182em 1.15em    1.818em;
+    height: 1em;
+}
+
+aside.lftNav
+{
+	float:left;
+	min-width:19.364em;
+	margin-top:0;
+	margin-right:.818em;
+	margin-bottom:.818em
+}
+ul.nav {
+	margin: 0;
+}
+ul.nav li {
+}
+ul.nav a, ul.nav a:visited {
+	padding: 0.517em 0.417em 0.5em 1.250em;
+	height: 1.250em;
+	display: block;
+}
+.lftNav {
+	float: left;
+	width: 16.667em;
+	/*padding-bottom: 0.833em;*/
+	margin-top: 0.933em;
+	margin-right: 0.833em;
+	margin-bottom: 0.833em;
+}
+/*****************  Breadcrumbs & Vertical Navigation/ Common Links **********************/
+.brdCrumNcommonLnksContainer
+{
+	margin-top:1.23em
+}
+
+.breadCrumb
+{
+	padding-top:.417em
+}
+
+.breadCrumb ul
+{
+	margin:0;
+	padding:0
+}
+
+.breadCrumb ul li
+{
+	display:inline;
+	padding:0 .818em 0 .417em
+}
+
+.breadCrumb ul li.current
+{
+	display:inline;
+	padding:.33em .818em 0 .417em
+}
+
+span.current
+{
+	margin-left:.818em
+}
+
+.commonNavLinks ul li a
+{
+	display:block;
+	height:1.833em;
+	min-width:3.333em;
+	padding:.5em .818em 0 3em
+}
+.commonNavLinks,.fltrt
+{
+	float:right
+}
+.headerRight .commonNavLinks{
+	margin-top: 0.364em;
+}
+.commonNavLinks ul,.tabs > ul,.customTabs > ul,.actionList ul,.actionBtnContainer .actionBtnLinks,.actionBtnContainer .peginationBtnLinks
+{
+	margin:0;
+	padding:0
+}
+
+.commonNavLinks ul li,.actionBtnContainer .actionBtnLinks li
+{
+	float:left;
+	padding:0
+}
+/*********** Top Header icons ****************************************************/
+.logoutDetails ul li a {
+    min-width: 0.333em !important;
+}
+.logoutDetails ul li a{ 
+	padding: 0.5em 0.818em 0 1.6em !important;
+}
+.ui-tabs .ui-tabs-panel {
+	padding: 0 !important;
+}
+.headerSwitchUser {
+	padding: 0 0.756em 0 .256em !important;
+	margin: 0.3em 0 0 0;
+}
+
+.headerSwitchUser a.switchUserIcon{
+	padding: 0px !important;
+}
+/****************************************************** Tabs Header  ****************************************************/
+
+#tabs li .ui-icon-close 
+{ 
+	float: left; 
+	margin: 10px 0 0 0; 
+	cursor: pointer; 
+}
+#tabWrapper .ui-state-default, #tabWrapper .ui-widget-content .ui-state-default, #tabWrapper .ui-widget-header .ui-state-default 
+{
+    font-weight: bold;
+}
+
+#tabWrapper .ui-state-active, #tabWrapper .ui-widget-content .ui-state-active, #tabWrapper .ui-widget-header .ui-state-active 
+{
+    font-weight: bold;
+}
+
+.ui-tabs{
+	padding: 0;
+}
+
+#tabWrapper {
+    height:2.85em;
+}
+.ui-tabs .ui-tabs-nav {
+    padding: 0!important;
+}
+.ui-tabs .ui-tabs-nav li a{
+	padding: 11px 13px;
+}
+:root .ui-tabs .ui-tabs-nav li a{
+	padding: 12px 13px \0/IE9;
+}
+/* #tabWrapper .ui-state-active a{
+	padding:.7em 1em 0.92em 1em;
+} */	
+#tabWrapper2
+{
+	padding:0 0.2em !important;
+	margin-left: 3.818em;
+}
+.ui-tabs .ui-tabs-nav li
+{
+	margin-top:0em !important;
+	margin-right:0em !important;
+}
+.tab-first-li
+{
+	margin:0 0 0 9.545em !important;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: -0.091em;
+    padding-bottom: 0em!important;
+}
+.ui-tabs .ui-tabs-panel
+{
+	padding:0 !important;
+}	
+/*****************  Content Page ***********************************************/
+.contentWrapper
+{
+	width:100%;
+	top: 3.45em;	
+	overflow:auto;
+	overflow-x:hidden;
+	left:0;	
+	min-width:102.255em;
+	display:block;
+	
+	/*position:absolute;
+	bottom:2.95em;	
+     visibility: hidden; */ 
+}
+
+.content
+{
+	margin:0em;
+	overflow-x:hidden;
+	overflow-y:auto;
+	width:100%;
+	height:100%;
+	
+}
+.contentMaster .outerContainer{
+	max-width:133.333em;
+}
+/*****************  Footer		 ***********************************************/
+footer
+{
+	height:2.917em;
+	position:absolute;
+	clear:both;
+	bottom:0;
+	width:100%;
+	min-width:105.255em;
+	display:block;
+	visibility: hidden;
+}
+.footerRight
+{
+	float:right;
+	width:60%;
+}
+.copyrightSectionText
+{
+	padding:.7em 1.667em;
+	float: left;
+   	width: auto;
+}
+
+.footerButtonBlock
+{
+	float:right;
+	display:inline-block;
+	margin-top:-0.05em
+}
+.footerlink
+{
+       padding:.7em 1.667em;
+       
+}
+.footerlink ul, .headerlink ul{
+       list-style-type:none;
+}
+.footerlink li, .headerlink li
+{
+       padding:0 0.5em;
+       float:left;
+}
+.footerButton{
+       
+}
+.footerNotification ul li{
+	padding: .75em .7em 0.15em .6em;
+	text-align: center;
+	min-width: 2em;
+	height: 2em;
+	float: left;
+}
+#alertsNotification span{
+	float: left;
+	margin-right: 5px;
+}
+#alertsNotification li span:last-child{
+	margin-right: 0px;
+}
+.severityHighTxt, .severityMediumTxt, .severityLowTxt{
+	border-radius: 15px 15px 15px 15px;
+	min-width: 12px;
+    padding: 2px;
+    text-align: center;
+	float:left;
+	margin:0 2px;
+}	
+.noConnectivityAlertIcon .severityHighTxt{
+	margin-left: 11px;
+	margin-top: 9px;
+}
+/********************************************************************************
+					03.Secondary layout structures								*
+********************************************************************************/
+/*****************  Search Panel************************************************/
+#searchPanel{
+	padding:5px 10px;
+}
+/*
+.searchHeaderR
+{
+	margin-top:0;
+	padding-top:.333em;
+	display:block
+}
+
+.searchHeaderL
+{
+	margin-top:0;
+	padding-top:.25em;
+	float:left
+}
+
+.searchHeaderL a
+{
+	display:block;
+	margin-right:.417em;
+	float:right;
+	padding:.417em .818em
+}
+*/
+.frmPadding
+{
+	display:block;
+	padding:1em
+}
+
+.frmPaddingfluid
+{
+	overflow:auto;
+	width:auto;
+	overflow-y:hidden
+}
+
+.filterPanelHeader
+{
+	margin-left:1.2em
+}
+/*****************  Sections/Collapsible/Non-Collapsible ***********************/
+section.rightContentPanel{
+	width:auto;
+	overflow:auto;
+	overflow-x:hidden;
+	display:block;
+	height:100%;
+}
+/* .sectionHeaderLeft
+{
+	height:1.5em;
+	padding:.417em .8em
+} */
+.sectionHeaderGridPanel .sectionHeaderPanel/*, aside .sectionHeaderPanel */{
+	padding: .517em .8em;
+}
+/*
+.sectionHeaderCollapse
+{
+	padding:5px;
+}
+
+.sectionHeaderCollapse a
+{
+	padding-left:1.7em
+}*/
+.sectionHeaderCollapse
+{
+	padding:0.455em; 
+}
+/* Removeable 
+.sectionHeaderCollapse span
+{
+	padding-left:1.7em
+}
+*/
+.sectionHeaderCollapse a
+{
+	padding-left:1.7em
+}
+.fluidContainer{
+	/*overflow-x:auto;*/ /*commented to remove the IE scrollbar issue in Flight Watch Tabular view*/
+	overflow:hidden;
+/* 	min-height:0%;
+	height:0% */
+}
+
+.fluidContainerFull{
+	overflow:auto;
+	height:0
+}
+
+.sectionHeaderNonCollapse{
+	padding:.417em .8em
+}
+.slidePane .sectionHeaderNonCollapse, .popupFilter .sectionHeaderNonCollapse{
+	padding: .909em;
+}
+.fluidContainerFullinTab, .overflowAuto{
+	overflow:auto
+}
+.overflowYauto{
+	overflow-y:auto;
+}
+.sectionHeadermargin
+{
+	margin-top:-.273em
+}
+a.collapseSearch,a.expandSearch
+{
+	width:99.5%;
+	height:2em;
+	display:block
+}
+.outerContainer{
+	margin:0 1em;
+	width:100%;
+}
+/*****************  Tabs *******************************************************/
+.tabs > ul, .customTabs > ul {
+    width: 99.9%;
+}
+.tabs > ul > li, .customTabs > ul > li
+{
+	display:block;
+	float:left;
+	/*margin-right:.367em;*/
+	height:1.3em;
+	cursor:pointer;
+	position:relative;
+	padding:.617em 1.083em
+}
+
+.tabs > ul > li span.error, .customTabs > ul > li span.error
+{
+	width:1.455em;
+	height:1.455em;
+	float:right;
+	position:absolute;
+	top:.25em;
+	right:.25em
+}
+
+.tabscontent
+{
+	clear:both;
+	padding:.417em
+}
+
+.frmPaddingfluidtabs, .overflowXhidden
+{
+  overflow-x:hidden
+}
+.infoPopUp  .tabs > ul {
+    width: 99.9%;
+}
+/*****************  DataGrid ***************************************************/
+.dataGrid
+{
+	width:100%
+}
+
+.dataGrid th
+{
+	height:1.818em;
+	padding:.2em .5em
+}
+
+.dataGrid td
+{
+	padding:.2em .4em
+}
+.actionBtnContainer
+{
+	margin-top:-.09em;
+	width:auto;
+	padding:.3em 0
+}/*
+.peginationBtnLinks li a.nxt,.peginationBtnLinks li a.nxt:hover
+{
+	padding-right:1.7em
+}*/
+
+.pagination
+{
+	margin-right:5px!important
+}
+
+.autoScroll
+{
+	width:auto;
+	overflow:auto;
+	/* height:0%; */
+}
+
+.dataGrid th.tabletilt
+{
+	-webkit-transform:rotate(-90deg);
+	writing-mode:tb-rl;
+	-moz-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	white-space:nowrap;
+	background:none;
+	padding:0
+}
+.dataGridContainer,.msgContainer,.widthauto
+{
+	width:auto;
+	overflow:hidden;
+}
+
+.dataGrid th.sort,.dataGrid tr.even,.dataGrid tr.odd
+{
+	padding:.25em
+}
+/*****************  Modal/Overlay/Messages *************************************/
+.overlay
+{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	height:100%;
+	width:100%;
+	display:none;
+	z-index:101;
+	margin:0;
+	padding:0
+}
+
+.modalWindow
+{
+	display:none;
+	position:fixed;
+	top:40%;
+	left:35%;/*50% For error message pop-ups updated by satheesh*/
+	z-index:102
+}
+
+.modalWindowHeader
+{
+	height:1.5em;
+	padding:.5em .818em
+}
+
+.modalWindowTitle
+{
+	width:60%;
+	float:left
+}
+.modalMsgWindowHeader
+{
+	height:3em;
+}
+
+.modalMsgWindowTitle
+{
+	padding: 0.859em .5em;
+	width:75%;
+	float:left
+}
+.modalWindowClose
+{
+	width:30%;
+	float:right;
+	cursor:pointer;
+}
+
+.modal a.close-modal:hover
+{
+	top:.455em;
+	right:.455em
+}
+.modelIcon, .modalMsgCloseIcon{
+    padding: 0.67em 0.8em;
+}
+.modelIcon span, .modalMsgCloseIcon span{
+    height: 1.667em;
+    width: 1.667em;
+}
+.modalWindowContent
+{
+	padding-bottom:.417em;
+	margin-bottom:.583em
+}
+.msgBtnDiv {
+	padding:0.725em;
+}
+.messageCotainer
+{
+	width:40em
+}
+
+.successMsg,.errorMsg,.entitlementMsg,.warningMsg
+{
+	height:5.3em;
+	display:block;
+	margin:.417em 0
+}
+
+.errorMsgPageLevel
+{
+	height:5.3em;
+	display:block;
+	width:auto;
+	margin:.417em 0;
+	padding:.5em 0 .5em .5em
+}
+
+/* .successIcon
+{
+	display:inline-block;
+	margin-right:.5em;
+	height:1.455em;
+	width:1.455em
+} */
+
+.msgHeadLine
+{
+	margin-bottom:.4em;
+	margin-right:.5em
+}
+
+.msgTxt
+{
+	display:block;
+	height:3.8em;
+	width:auto;
+	overflow:hidden
+}
+
+#pagelevelError
+{
+	position:absolute;
+	width:33.333em;
+	left:35%;
+	top:6.667em;
+	display:none
+}
+
+.msgDetailsHeader
+{
+	padding:.818em 0 .818em .818em
+}
+
+.confirmationDialog, .warningDialog{
+	margin: -0.5em -1em;
+    width: 33.3em;
+}
+/* To bring conformation dialog look and feel*/
+.flightConfirmationDialog{
+	margin: -11px -13px 7px -10px;
+}
+.flightModelIcon{ 
+	padding: 8.35px;
+}
+:root .flightModelIcon {
+	padding: 7.5px 8px 8px 8px \0/IE9;
+}
+#msgDiv .modalWindowContent{
+	margin-bottom: 0em;
+    padding-bottom: 0em;
+}
+.SuccessMsgWithIcon{top:0}
+/*
+.modalWindow.errorMsgWithIcon, .modalWindow.SuccessMsgWithIcon, .modalWindow.WarningMsgWithIcon{
+	padding:5px 5px 5px 45px;
+	min-height:80px;
+	width:300px;
+	margin: -40px 0 0 -175px;
+	border-width:0.09em;
+	border-style:solid;
+	z-index:9999;
+}
+
+.modalWindow.SuccessMsgWithIcon{
+	top:auto;
+	left:auto;
+	right:10px;
+	bottom:40px;
+	margin-left:0;
+}
+div.modalWindow.errorMsgWithIcon.fullscreen, div.modalWindow.SuccessMsgWithIcon.fullscreen, div.modalWindow.WarningMsgWithIcon.fullscreen{
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin:0;
+	width:auto;
+}*/
+/********************************************************************************
+					04.Form and Form elements									*
+********************************************************************************/
+.formRow ul li
+{
+	float:left;
+	width:120px;
+	height:3em;
+	margin-right:1.667em;
+	margin-top:.5em
+}
+
+.formRow ul li.colspan2
+{
+	width:259px
+}
+
+.formRow ul li.colspan3
+{
+	width:399px
+}
+
+.formRow ul li.colspan4
+{
+	width:45.6em
+}
+
+.formRow ul li ul
+{
+	margin-top:0;
+	margin-left:0
+}
+
+.formRowAutoWidth > ul li
+{
+	float:left;
+	width:auto;
+	height:4em;
+	margin-right:20px;
+	margin-top:.5em
+}
+
+.formRowAutoWidth ul li label
+{
+	margin-bottom:.3em
+}
+
+.formRowWidth ul 
+{
+	padding: 0;
+	margin: 0;
+}
+
+.formRowWidth > ul li 
+{
+	float: left;
+	width: 19em;
+	height: 4em;
+	margin-right: 1.667em;
+	margin-top: .5em;
+}
+
+.formRowWidth ul li label
+{
+	margin-bottom:.3em;
+	display: block;
+	white-space:nowrap;
+}
+
+.formRowWidthInline ul 
+{
+	padding: 0;
+    margin: 0;
+}
+
+.formRowWidthInline > ul li 
+{
+	float: left;
+    /*line-height: 2.5em;*/
+	padding:0.585em 0;
+	vertical-align: middle;
+}
+
+.formRowWidthInline ul li label
+{
+	margin-bottom:.3em;
+    display: inline;
+	float:left;
+    white-space:nowrap;
+}
+
+.formRowInlineLabel input[type=radio], .formRowInlineLabel input[type=checkbox]{
+    margin-top:0.47em;
+}
+.fourColForm ul li:nth-child(4n+1){
+	clear:left;
+}
+
+ul li.doubleColumnWidth{
+	width:39.750em;
+}
+
+button[disabled],input[disabled]
+{
+	cursor:default
+}
+
+input[type=checkbox],input[type=radio]
+{
+	box-sizing:border-box;
+	height:13px;
+	width:13px;
+	padding:0;
+	margin: 0.106em 0.415em 0.16em 0.16em;
+}
+
+textarea
+{
+	overflow:auto;
+	vertical-align:top;
+}
+
+input[type=text],input[type=password],input[type=select],input[type=search]{
+	/*height:1.35em;*/
+	padding:0.25em 0.15em 
+}
+.ui-search-input input{
+	/*height:1.35em;*/
+	padding:0.25em 0.135em !important;
+	width:98.2% !important;
+}
+
+select{
+	padding:3px 10px 3px 2px;
+}
+
+input[type=submit],input[type=button],input[type=reset]
+{
+	margin: 0 3px 0 0;
+    padding: 4px 12px;
+}
+
+input.actionBtn
+{
+	padding:0 2em .364em .455em
+}
+
+.formRow ul,.formRowAutoWidth ul,.normalList ul{
+	list-style:none;
+	margin:0;
+	padding:0
+}
+.ui-jqgrid .ui-jqgrid-htable th div input[type=checkbox] {
+	margin-left: 0px;
+}
+.lineHeight18{
+	line-height: 18px;
+}
+/*****************  pop up form row width		****************************************/
+.popupFormRowWidthInline ul li {
+    padding: 0.185em 0;
+}
+.popupFormRowAutoWidth>ul li {
+	margin-right: 0em;
+	margin-top: 0em;
+	padding: 0.285em 0;
+	height: auto;
+}
+.popupFormRowAutoWidth ul li label {
+	margin-bottom: 2px;
+}
+/********************************************************************************
+					05.Common													*
+********************************************************************************/
+.fltrt, .footerButtonBlock
+{
+	float:right
+}
+
+.fltlft, #addlnButtons, #basicButtons{
+	float:left
+}
+
+.fltNone
+{
+	float:none!important
+}
+
+.clearfloat
+{
+	clear:both;
+	height:0
+}
+.clearLi{
+	clear:both;
+}
+
+.displyInline
+{
+	display:inline-block!important
+}
+
+.displyBlock{
+	display:block;
+}
+.displayTableCell
+{
+	display:table-cell
+}
+
+.inline
+{
+	display:inline!important
+}
+
+.relPosition
+{
+	position:relative
+}
+.mrgnAuto
+{
+	margin:auto
+}
+
+.valignmiddle
+{
+	vertical-align:middle
+}
+/********************************************************************************
+					06. Action Links/Icons&Images/Indication					*
+********************************************************************************/
+/*****************  Action Links ***********************************************/
+.actionList
+{
+	display:none;
+	position:absolute;
+	width:13.636em;
+	border-radius:.273em;
+	padding:.182em
+}
+
+.actionList ul li
+{
+	list-style:none
+}
+
+.actionList ul li a
+{
+	display:block;
+	height:1.364em;
+	border-radius:.455em;
+	padding:.455em .727em
+}
+
+.actionBtnLinks
+{
+	margin-left:5px!important
+}
+.actionBtnLinks li a,.peginationBtnLinks li a
+{
+	display:block;
+	height:1.833em;
+	min-width:3.333em;
+	padding:.5em .818em 0 2.5em
+}
+
+.actionBtnLinks li a span,.peginationBtnLinks li a span
+{
+	display:block;
+	margin:0.2em 0 0 .3em
+}
+.actionBtnHeader .actionBtnLinks li a span{margin:0.2em 0 0 .3em}
+.actionBtnHeader .actionBtnLinks li a
+{
+	padding: 0.8em 0 0 2em;
+	display:inline;
+}
+.actionBtnHeader .actionBtnLinks li
+{
+	padding:0.7em 0.71em 0;
+	text-align:center;
+	height:3em;
+}
+/*****************  Tool Bar *****************/
+.iconsWrapper{
+	padding:4px 5px;
+}
+.actionToolBar{
+	margin-right: 10px !important;
+}
+.applyFilter:after, .appliedFilter:after{
+	top: 87%;
+	height: 0;
+	width: 0;
+	margin-left: -5px;
+}
+/*****************  Icons&Images ***********************************************/
+.addIcon
+{
+	display:block;
+	height:1.455em;
+	width:1.455em;
+	margin-left:.455em
+}
+
+.msgIcon
+{
+	width:2.182em;
+	height:2.182em
+}
+
+.stockIcon
+{
+	width:2em;
+	height:2em;
+	display:block;
+	vertical-align:bottom
+}
+
+.getNextDoc
+{
+	width:2em;
+	height:2em;
+	display:block;
+	vertical-align:bottom
+}
+
+.calendarIcon,.lovIcon
+{
+	width:1.50em;
+	height:1.50em;
+	display:block
+}
+
+/* .refreshIcon
+{
+	width:1.455em;
+	height:1.455em;
+	display:block;
+} */
+
+
+.modalCloseIcon, .modalPrevious, .modalNext, .arrowRight, .arrowLeft, .engineeringIcons, .crewIcons,
+.notamsIcons, .notamsIcons:hover, .commonNormal, .commonSelect 
+{
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+}
+/*.changeLeave, -removed for testing*/
+.unselectedApproved, .publicHolidayBlock, .startDayBlock, .dynamic
+{
+	width:0.909em;
+	height:0.909em;
+}
+.dayOff
+{
+	width: 3.3em;
+    height: 2em;
+}
+.sliderArrow{
+	padding:2px 0;
+}
+.sliderPanel 
+{
+	float: left;
+ 	position: relative;
+	border:1px solid green;
+}
+.allocImg
+{ 
+	height: 1.264em;
+	width: 1.264em;
+}
+.arrowDownWht{
+	cursor: pointer;
+	padding: 0.15em 1em;
+	height: 1em;
+	width: 1em;
+}
+
+/*****************  Indications ************************************************/
+.btnModal,.btnConfirmation,.btnError
+{
+	float:right;
+	display:none
+}
+
+.errorMsg,.successMsg,.infoMsg,.warningMsg
+{
+	width:auto;
+	padding:.5em 0 .5em .5em
+}
+
+.errorMsgIconContainer,.successMsgIconContainer,.infoMsgIconContainer,.warningMsgIconContainer
+{
+	float:left;
+	width:4em
+}
+
+.errorMsgIcon,.successMsgIcon,.infoMsgIcon,.warningMsgIcon
+{
+	height:3.333em;
+	width:3.667em;
+	display:block
+}
+
+.msgContainer img,input.actionBtn:hover
+{
+	cursor:pointer
+}
+
+.indRed,.indAmber,.indGreen
+{
+	height:1.091em;
+	width:1.091em;
+	display:inline-block
+}
+/********************************************************************************
+					07. Miscellaneous											*
+********************************************************************************/
+/*****************  Width In em ************************************************/
+.width20
+{
+	width:1.818em
+}
+
+.width30
+{
+	width:2.727em
+}
+
+.width40
+{
+	width:3.636em
+}
+
+.width50
+{
+	width:4.545em
+}
+
+.width60
+{
+	width:5.455em
+}
+
+.width65
+{
+	width:5.909em
+}
+
+
+.width75
+{
+	width:6.818em
+}
+
+.width80
+{
+	width:7.273em
+}
+
+.width85 {
+	width: 7.5em;
+}
+
+.width90
+{
+	width:8.182em
+}
+
+.width100
+{
+	width:9.091em!important
+}
+
+.width115{
+	width:10.182em;
+}
+
+.width120
+{
+	width:10.909em
+}
+.width125{
+	width:10.41em;
+}
+.width135{
+	width:11.270em;
+}
+.width140
+{
+	width:12.727em
+}
+
+.width150
+{
+	width:13.636em!important
+}
+
+.width160
+{
+	width:14.270em!important
+}
+
+.width180
+{
+	width:16.364em
+}
+.width190{
+	width:17.183em;
+}
+
+.width200
+{
+	width:18.182em
+}
+
+.width220
+{
+	width:20em
+}
+
+.width240
+{
+	width:21.818em
+}
+
+.width250
+{
+	width:22.727em
+}
+
+.width260
+{
+	width:23.636em;
+}
+.width275 {
+	width: 25em;
+}
+.width280
+{
+	width:25.455em
+}
+.width290 {
+	width: 26.5em;
+}
+.width300
+{
+	width:27.273em
+}
+
+.width330
+{
+	width:30em
+}
+
+.width350
+{
+	width:31.818em
+}
+.width385Imp{
+	width:32em !important;   /*  parthiban*/
+}
+.width365Imp{
+	width:30.45em !important
+}
+.width380{
+	width:34.333em;
+}
+.width400
+{
+	width:36.364em
+}
+.width410
+{
+	width:37.273em
+}
+.width415{
+	width:415px;
+}
+.width420
+{
+	width:38.182em
+}
+
+.width450
+{
+	width:40.909em
+}
+
+.width480
+{
+	width:43.636em
+}
+
+.width490
+{
+	width:44.545em
+}
+
+.width500
+{
+	width:45.455em
+}
+
+.width550
+{
+	width:50em
+}
+
+.width565
+{
+	width:51.364em
+}
+
+.width600
+{
+	width:54.545em
+}
+.width632{
+	width:57.5em;
+}
+.width620{
+	width:59.545em;
+}
+.width640
+{
+	width:58.182em
+}
+
+.width650
+{
+	width:59.091em
+}
+
+.width680
+{
+	width:61.818em
+}
+
+.width700
+{
+	width:63.636em
+}
+
+.width750
+{
+	width:68.182em
+}
+
+.width755
+{
+	width:67.002em
+}
+
+.width760
+{
+	width:69.091em
+}
+
+.width800
+{
+	width:72.727em
+}
+.width816
+{
+	width:74.182em
+}
+
+.width850
+{
+	width:77.273em
+}
+
+.width900
+{
+	width:81.818em
+}
+
+.width910
+{
+	width:82.727em
+}
+
+.width968
+{
+	width:88em
+}
+
+.width990
+{
+	width:90em
+}
+
+.width1000
+{
+	width:90.909em
+}
+
+
+.width1100
+{
+	width:100em
+}
+
+.width1200
+{
+	width:109.091em
+}
+
+.width1300
+{
+	width:118.182em
+}
+
+.width1350
+{
+	width:122.727em
+}
+
+.width1400
+{
+	width:127.273em
+}
+
+.width1450
+{
+	width:131.818em
+}
+
+.width1460
+{
+	width:132.727em
+}
+
+.width1500
+{
+	width:136.364em
+}
+
+.width1600
+{
+	width:145.455em
+}
+
+.width1700
+{
+	width:154.545em
+}
+
+.width1800
+{
+	width:163.636em
+}
+
+.width1900
+{
+	width:172.727em
+}
+/*****************  Width In Percentage ****************************************/
+.width48P
+{
+	width:48%
+}
+
+.width58P
+{
+	width:58%
+}
+
+.width68P
+{
+	width:68%
+}
+.width25per
+{
+	width:25%
+}
+.width27pt8per
+{
+	width:27.8%
+}
+
+.width30P,.width30per
+{
+	width:30%
+}
+
+.width35per
+{
+	width:35%
+}
+
+.width36per
+{
+	width:36%;
+	float:right
+}
+
+.width40P,.width40per
+{
+	width:40%
+}
+
+.width45per
+{
+	width:45%
+}
+
+.width44per
+{
+	width:44%
+}
+
+.width46per
+{
+	width:46%
+}
+
+.width50per
+{
+	width:50%
+}
+
+.width51per
+{
+	width:51%
+}
+
+.width54per
+{
+    width:54%
+}
+
+.width58per
+{
+	width:58.5%
+}
+.width60per
+{
+	width:60.5%
+}
+.width65per{
+	width:65%
+}
+.width70per
+{
+	width:70%
+}
+.width75per
+{
+	width:75%
+}
+.width98per
+{
+	width:98%
+}
+.width100per
+{
+	width:100%
+}
+/*****************  Width In Minimum ****************************************/
+.minwidth1500
+{
+	min-width:136.364em;
+}
+.minwidth1100
+{
+	min-width:100em;
+}
+/*****************  Width In Maximum ****************************************/
+.maxWidth245{
+  max-width:245px
+}
+.maxWidth800
+{
+  max-width:72.727em
+}
+.maxWidth850
+{
+  max-width:77.273em;
+}
+.maxWidth1000
+{
+  max-width:90.909em                
+}
+.maxWidth1100 
+{
+  max-width:100em
+}
+.maxWidth1300
+{
+  max-width:118.182em
+}
+.maxWidth1320 
+{
+	max-width:120.000em
+}
+
+/*****************  Margin Top			****************************************/
+.tspZero{
+	margin-top:0px !important
+}
+.tsp1{
+	margin-top:1px;
+}
+.tsp3{
+	margin-top:0.250em
+}
+.tsp5
+{
+	margin-top:.455em
+}
+
+.tsp10
+{
+	margin-top:.909em
+}
+
+.tsp15
+{
+	margin-top:1.364em
+}
+
+.tsp20
+{
+	margin-top:1.818em
+}
+
+.tsp25
+{
+	margin-top:2.273em
+}
+
+.tsp30
+{
+	margin-top:2.727em
+}
+.tsp40{
+	margin-top:40px;
+}
+.tsp75
+{
+    margin-top:4.688em
+}
+/*****************  Margin Right		****************************************/
+.rspZero{
+	margin-right:0px !important
+}
+.rsp5
+{
+	margin-right:.455em
+}
+
+.rsp10
+{
+	margin-right:.909em
+}
+.rsp15
+{
+	margin-right:1.250em
+}
+
+.rsp20
+{
+	margin-right:1.818em
+}
+
+.rsp30
+{
+	margin-right:2.727em
+}
+
+.rsp40
+{
+	margin-right:3.636em
+}
+
+.rsp50
+{
+	margin-right:4.545em
+}
+/*****************  Margin Bottom		****************************************/
+.bsp1px{
+	margin-bottom:1px;
+}
+.bsp5{
+	margin-bottom:.455em
+}
+
+.bsp10{
+	margin-bottom:.909em
+}
+.bsp12{
+	margin-bottom:1em
+}
+.bsp35{
+	margin-bottom:2.917em
+}	
+/*****************  Margin Left		    ****************************************/
+.lsp2
+{
+	margin-left:.2em
+}
+
+.lsp5
+{
+	margin-left:.455em
+}
+
+.lsp10
+{
+	margin-left:.909em
+}
+.lsp15{
+	margin-left:1.250em;
+}
+.lsp20
+{
+	margin-left:1.818em
+}
+
+.lsp25
+{
+	margin-left:2.273em
+}
+
+.lsp30
+{
+	margin-left:2.727em
+}
+
+.lsp40
+{
+	margin-left:3.636em
+}
+
+.lsp50
+{
+	margin-left:4.545em
+}
+
+.lsp300
+{
+	margin-left:27.273em
+}
+
+.lsp320
+{
+	margin-left:29.091em
+}
+/*****************  Margin All			****************************************/
+.margin5Imp{
+	margin:.545em!important
+}
+.marginNone{
+	margin:0px important
+}
+/*****************  Padding Top			****************************************/
+.tpdZero{
+	padding-top:0px !important;
+}
+.tpd5
+{
+	padding-top:.455em
+}
+
+.tpd10
+{
+	padding-top:.909em
+}
+
+.tpd15
+{
+	padding-top:1.364em
+}
+
+.tpd20
+{
+	padding-top:1.818em
+}
+/*****************  Padding Right		****************************************/
+.rpdZero{
+	padding-right:0 !important;
+}
+.rpd5
+{
+	padding-right:.455em
+}
+
+.rpd10
+{
+	padding-right:.909em
+}
+
+.rpd17
+{
+	padding-right:1.545em
+}
+
+.rpd20
+{
+	padding-right:1.818em
+}
+
+.rpd30
+{
+	padding-right:2.727em
+}
+
+.rpd40
+{
+	padding-right:3.636em
+}
+
+.rpd50
+{
+	padding-right:4.545em
+}
+/*****************  Padding Left		****************************************/
+.lpd5
+{
+	padding-left:.455em
+}
+
+.lpd10
+{
+	padding-left:.909em
+}
+.lpd13{
+	padding-left:13px;
+}
+.lpd20
+{
+	padding-left:1.818em
+}
+
+.lpd25
+{
+	padding-left:2.273em
+}
+
+.lpd30
+{
+	padding-left:2.727em
+}
+
+.lpd40
+{
+	padding-left:3.636em
+}
+
+.lpd50
+{
+	padding-left:4.545em
+}
+.ui-jqgrid tr.jqgrow td.gridLpd20{
+	padding-left:1.667em !important;
+}
+/*****************  Padding Bottom		****************************************/
+.bpd5{
+	padding-bottom:5px;
+}
+.bpd10{
+	padding-bottom:10px;
+}
+
+/*****************  Padding All			****************************************/
+.pdngNone{
+	padding:0!important
+}
+.pdng3{
+	padding:.305em
+}
+.pdng5Imp{
+	padding:.545em!important
+}
+
+/*****************  Login MISC			****************************************/
+.login{
+	width: 350px;
+	/* margin: 27% 5% 0%; */
+	padding: 0;
+	bottom: 15%;
+	position: absolute;
+	right: 5%;
+}
+.topsLogo, .qatarLogo{
+	height: 80px;
+}
+.login p {
+	margin:0; padding:0
+}
+.login .largeLnth{
+	margin:10px 10px 0; 
+	padding:10px 5px; 
+	width:90%;
+}
+.login input.button{
+	margin:10px; 
+	padding:10px 5px; 
+	width:40%;
+}
+.loginLink{
+	padding:20px 13px 25px 10px !important;
+}
+.userLoginHead{
+	padding: 10px;
+	margin: 0;
+}
+.loginError{
+	padding: 74px 0 0 10px;	
+}
+.loginError .loginError{
+	padding: 0px;
+	width: 200px;
+	margin-top:0;
+}
+/* .loginImg
+{
+	width:69.167em;
+	margin:10% auto
+}
+
+.loginBG
+{
+	margin-left:16em;
+	width:34.167em;
+	height:16.333em;
+}
+
+.loginLogo
+{
+	padding-top:8em;
+	margin-bottom:10px;
+	width:50.4em
+} */
+
+.Wclnav
+{
+	width:2em;
+	height:5em;
+	float:left
+}
+
+.Wcldate
+{
+	width:5em;
+	height:5em;
+	float:left
+}
+
+.WcRnav
+{
+	width:2em;
+	height:5em;
+	float:left
+}
+
+.Wclweek
+{
+  width: 50em;
+  height:5em;
+  text-align:center;
+	border:#CCC solid 1px;
+	float:left;
+
+}
+
+/*****************  Height			****************************************/
+.heightAuto{
+	height:auto !important;
+}
+.height38{
+	height:3.364em;
+}
+.height48
+{
+	height:4.364em
+}
+.height90
+{
+	height:8.182em
+}
+.height100
+{
+	height:9.091em
+}
+.height110
+{
+	height:10em
+}
+.height120
+{
+	height:10.909em
+}
+.height520{
+  height:51em;
+}
+.height520px{
+	height:43.333em;
+}
+.height650{
+	height:59.091em;
+}
+.height100per
+{
+	height:100%;
+}
+.height75Px{
+	max-height:75px;
+}
+/********************************************************************************
+08.JQuery war Grid																*
+********************************************************************************/
+
+.ui-widget-header{
+	padding:0.455em!important
+}
+.ui-row-ltr td{
+	padding:0.333em 0.375em!important
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	 .ui-row-ltr td	{
+		padding:0.364em!important
+	}
+}
+/*
+.ui-icon-add
+{
+	margin:0 auto !important;
+	width:1.818em!important
+}
+
+.ui-icon-del
+{
+	margin:0 auto !important;
+	width:1.818em!important
+}
+
+.ui-icon-seek-prev
+{
+	margin:0 auto !important;
+}
+
+.ui-icon-seek-next
+{
+	margin:0 auto !important;
+}
+
+.ui-icon-merge
+{
+	margin-left:0.909em !important;
+	width:1.818em !important
+}
+
+.ui-icon-reprocess
+{
+	margin-left:0.909em !important;
+	width:1.818em !important
+}
+
+.ui-icon-resend
+{
+	margin-left:0.909em !important;
+	width:1.818em !important
+}
+
+.ui-icon-chistory
+{
+	margin-left:0.909em !important;
+	width:1.818em !important
+}*/
+.ui-jqgrid .ui-icon-desc {
+    height: 12px;
+    margin-top: 3px;
+	margin-left:5px;
+}
+.ui-jqgrid .ui-icon-asc {
+    height: 11px;
+    margin-top: -3px;
+	margin-left:5px;
+}
+.ui-jqgrid .ui-state-disabled:hover{padding:0px}
+.ui-jqgrid tr.jqgrow td, .ui-jqgrid tr.ui-row-ltr td {
+	vertical-align: middle !important;
+}
+
+.ui-jqgrid-view .ui-jqgrid-bdiv {
+    /*max-height: 325px !important;*/
+    min-height: 31px !important;
+    overflow-x: hidden;
+}
+.popupGridMaxHeight .ui-jqgrid-view .ui-jqgrid-bdiv{
+	max-height:155px;
+}
+/* .popUpContainer .ui-jqgrid-view .ui-jqgrid-bdiv{ //after discussed with Faisal removed 
+	max-height: 186px;
+	min-height: 30px !important;
+	overflow-x: hidden;
+} */
+
+.gridMaxHeight300 .ui-jqgrid-view .ui-jqgrid-bdiv{
+	max-height: 300px !important;
+}
+.ui-jqgrid-view .ui-jqgrid-bdiv .ui-jqgrid-bdiv {
+    min-height: 24px !important;
+}
+
+input.datePicker{
+	width:80px;
+	margin-right:5px;
+}
+
+#calendarId .ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all{width:98%}
+/* .datePicker.hasTimeStamp{
+	min-width:105px;
+} */
+/* For Removing ICONS from grid actions  */
+.ui-pager-control span.ui-icon{
+	display:none;
+}
+/*
+.jqgfirstrow + tr {
+	border-top: 0 solid transparent !important;
+}
+.jqgfirstrow + tr.ui-state-highlight{
+	border-top: 1px solid #E7C6D8 !important;
+}*/
+
+.ui-datepicker-trigger{
+	display:none !important;
+}
+.ui-jqgrid .ui-jqgrid-htable th{
+	vertical-align:middle;
+}
+.ui-jqgrid-titlebar-close.HeaderButton{
+	/*display:none;(Removed to bring back collapse icon)*/
+}
+.ui-jqgrid-pager span.sh-seek-prev1, .ui-jqgrid-pager span.sh-seek-next1{
+	cursor:pointer;
+}
+.ui-widget select {
+    width: 100%;
+}
+.ui-jqgrid .ui-jqgrid-pager{
+	height:auto;
+}
+
+.ui-search-toolbar .lov-filter div {
+	padding-right:7px !important
+}
+.ui-jqgrid-title label {
+    display: inline;
+    margin-left: 5px;
+}
+.ui-jqgrid .tree-leaf, .ui-icon-carat-1-sw{
+	margin-right:5px;
+	margin-left: 5px;
+}
+/*********************warGrid Dialog ***********************************/
+.ui-dialog{
+	z-index:103;
+}
+.ui-dialog .ui-dialog-title{
+	margin:.4em .76em;
+}
+
+/*********************Table header and footer Pagination***********************************/
+.ui-pager-control td .ui-pg-div{
+	padding: 0 0.7em 0 0 !important;
+    margin: 0.45em 0 0.45em 0.7em !important;
+}
+.ui-dialog-buttonset button.ui-button {
+	margin: 0 6px 0 0;
+    padding: 0.38em 0.2em;
+}
+.ui-pg-button.ui-corner-all{padding:0 !important;}
+/*********************warGrid Column text Wrapping ***********************************/
+.ui-jqgrid tr.jqgrow td{
+	white-space: normal;
+	word-break: normal;
+	word-wrap: break-word;
+/*	word-break: break-word;
+	Padding:0.417em !important; satheesh*/
+}
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column, .ui-jqgrid-htable th.ui-th-column .ui-th-div-ie {
+    white-space: normal;
+}
+.ui-jqgrid .ui-jqgrid-htable th div{
+	height: auto !important;  /**To adjust the height of the parent div, when text gets wrapped**/
+	text-align:left;
+	padding:9px 4px 6px 4px;
+}
+.ui-jqgrid .ui-jqgrid-htable{overflow: hidden;}
+/* .ui-jqgrid .ui-jqgrid-htable th div{
+	height:auto;
+} */
+.ui-jqgrid .ui-pg-table td {
+    padding: 0;
+} 
+ 
+input, td input{
+	padding-right:12px !important;
+}
+td input{
+	width: 100%!important;
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/********************* war Error Grid***********************************/
+#errorGridDiv #errorGrid {
+    width: 100% !important;
+}
+/* #errorGridDiv{
+    padding:1em;
+} */
+#errorGridDiv .ui-jqgrid .ui-jqgrid-bdiv{
+	min-height: 150px !important;
+	max-height: 250px !important;
+	height: 100% !important;
+}
+#errorGridDiv span.errorField {
+	margin-left: 20px;
+}
+#errorGridDiv .ui-jqgrid tr.jqgrow td{
+	height: 15px;
+}
+/*********************Date picker***********************************/
+.ui-datepicker {
+	width: inherit;
+	padding:0px;
+}
+.ui-datepicker td a, .ui-datepicker td span {
+	padding: 5px 10px;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{
+	width: 45%;
+	margin:0 3px;
+}
+.ui-datepicker table{
+	margin:0px;
+}
+.ui-datepicker .ui-datepicker-buttonpane{
+	float: left;
+	width: 98%;
+	margin: 0;
+}
+.ui-datepicker{
+	width:250px;
+	z-index:100 !important;
+}
+/*********************Time picker***********************************/
+.ui-timepicker-div dl dt.ui_tpicker_hour_label, .ui-timepicker-div dl dt.ui_tpicker_minute_label, .ui-timepicker-div dl dt.ui_tpicker_second_label {
+	display: none;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_hour, .ui-timepicker-div dl dd.ui_tpicker_minute, .ui-timepicker-div dl dd.ui_tpicker_second {
+	display: inline-block;
+	margin: 0 0.5em 0.5em !important;
+	width: 60px !important;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_hour .ui-spinner-input, .ui-timepicker-div dl dd.ui_tpicker_minute .ui-spinner-input, .ui-timepicker-div dl dd.ui_tpicker_second .ui-spinner-input{
+	margin-right:1.5em !important;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_time {
+    margin-left: 3.5em !important;
+}
+
+.ui-timepicker-div dl dt{
+	margin-left: 6px;
+	padding-top:5px;
+}
+.ui-timepicker-div dl dd{
+	  margin: 0 10px 5px 65px;
+}
+.ui-timepicker-div .ui-slider-handle.ui-state-default.ui-corner-all{
+    height: 12px;
+    width: 12px;
+	margin-top: 1px;
+}
+.ui-timepicker-div .ui-widget-header {
+  margin-bottom: 0px;
+}	
+/********************************************************************************
+					09.Page Specific											*
+********************************************************************************/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,.lftNav ul.nav li.selected a,label,#tblAllExcept1,#tblAllExcept2,#tblAllExcept3,#tblAllExcept4,#tblAllExcept5,#tblAllExcept6,#tblAllExcept7,#tblAllExcept8,#tblAllExcept9,#tblAllExcept10,#tblAllExcept11,#tblAllExcept12
+{
+	display:block
+}
+
+.dispNone,#ex5,#tblAllExcept1,#tblSpecInclude1,#tblAllExcept2,#tblSpecInclude2,#tblAllExcept3,#tblSpecInclude3,#tblAllExcept4,#tblSpecInclude4,#tblAllExcept5,#tblSpecInclude5,#tblAllExcept6,#tblSpecInclude6,#tblAllExcept7,#tblSpecInclude7,#tblAllExcept8,#tblSpecInclude8,#tblAllExcept9,#tblSpecInclude9,#tblAllExcept10,#tblSpecInclude10,#tblAllExcept11,#tblSpecInclude11,#tblAllExcept12,#tblSpecInclude12,#scm,#pageAddlnButtons,#pageButtonBlock,  #pageBasicButtons
+{    
+	display:none
+}
+
+.isvisible{
+	visibility:visible;
+}
+
+.nonvisible{
+	visibility:hidden;
+}
+
+#checkBox input[type="checkbox"]:first-child {
+    margin-left: 0em;
+}
+#checkBox input[type="checkbox"] {
+    margin:0.5em 0.5em 0 1.5em;
+}
+.leftPaneFilter{padding: 0.909em 0;}
+#indexPanelLeaveLine.formRowWidthInline > ul li
+{
+	line-height:1.5em;
+	padding:0px !important;
+}
+/*************Flight Watch*******************/
+.leftPanelMap, .leftPanelTabular{
+	width:27.750em !important;
+}
+.img-dest_org{/*way Point image position for start and end point*/
+	height:16px !important;
+	width:16px !important;
+}
+/**********************maintenance page*************************************/
+.wizards a {
+	padding: 0 10px 0 35px;
+}
+.wizards a:first-child {
+	padding-left: 1.182em;
+}
+.wizards a:first-child:before {
+	left: 1.273em;
+}	
+.wizards a:after {
+	width: 3.273em;
+    height: 3.273em;
+}
+.accordionCollapse a, .accordionExpand a{
+	height:13px;
+	width:13px;
+	margin-top:3px;
+}
+.sectionNonBg{
+	width: 98%;
+	margin:0 auto;
+	padding: 0.417em 0.1em;
+}
+/*******Crew Leave********//*
+#selectedDateRange div 
+{
+	float: left;
+	line-height: 2em; 
+}
+
+#selectedDateRange > div span
+{
+	float: left;
+	width: 22.5em;
+}
+
+#calendarId .ui-datepicker
+{
+	width:auto;
+}
+#tabularView table thead tr th.ui-th-column-header 
+{
+    padding-left: 15px;
+    text-align: left;
+}
+*/
+/***********Gantt Chart *****************/
+.GLBodyMid table, caption, tbody, tfoot, thead, tr, th, td {vertical-align: top}
+
+/***********Engineering stream *****************/
+.hasLink, .myPointer input:hover{cursor: pointer;}
+#aircraftDetails .formRowWidth > ul li
+{
+    width:17em !important;
+}
+
+/******* Bubble Pop Up (Offshore team added) Starts **********/
+.popupClass
+{
+    position: fixed;
+    display: none;
+    min-height: 0.909em;
+    max-width: 18.182em;
+    padding: 0.909em
+}
+
+.hoverLink, .hoverLink:hover
+{
+    display: block
+}
+
+#innerBubble
+{
+  font-weight: 300; 
+}
+
+/******* Bubble Pop Up (Offshore team added) Ends **********/
+/********************************************************************************
+					10.Browser Based Fix													*
+********************************************************************************/
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px !important}
+}*/
+.ui-pager-control tr{
+background:none !important
+}
+.ui-pager-control td{
+border:1px solid transparent !important
+}
+
+/* Error Tree */
+div#errorTreeDiv{
+	max-height:250px !important;
+	overflow:auto;
+	min-width:400px;
+}
+#errorTree li{
+	list-style:none;
+	padding:3px 5px;
+	margin:5px 0;
+}
+#errorTree li[data-error-field]:hover{
+	background:#f8f2f6;
+	cursor:pointer;
+}
+#errorTree li ul{
+	margin-left:20px;
+}
+#errorTree span {
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    text-indent: 999px;
+    width: 16px;
+		margin-right:5px;
+		cursor:pointer;
+		background:url("../images/ui-icons_ffffff_256x240.png") no-repeat -64px -16px;
+		clear:left;
+}
+#errorTree span.collapsed {
+	background-position:0 -16px;
+}
+
+/******************Tops Calendar******************/
+#calendarId .ui-datepicker.ui-datepicker-multi
+{
+	width:99.4% !important;
+	padding:0px;
+}
+#calendarId  .ui-datepicker-multi .ui-datepicker-group table{width: 99%;}
+.leaveStartBlock{
+	width:16px;
+	height:16px;
+	left:-3px;
+	top:-3px;
+}
+#calendarId .ui-datepicker td a
+{
+	padding:9px;
+}
+#calendarId .top-left
+{
+	top:0px!important;
+    left:0px!important;
+}
+#calendarId .top-right
+{
+	top:0px!important;
+    right:0px!important;
+}
+#calendarId .bottom-left
+{
+	bottom:0px!important;
+	left:0px!important;
+}
+#calendarId .bottom-right{
+	bottom:0px!important;
+    right:0px;
+}
+#calendarId .bottom
+{
+	bottom:0px!important;
+}
+#calendarId .top
+{
+	top:0px!important;
+}
+.cal-prev-button
+{
+    left: 0;
+	margin-top: -25px;
+	height: 1.455em;
+	width: 1.455em;
+}
+.cal-next-button{
+    right: 0;
+	margin-top: -25px;
+	margin-right: 5px;
+	height: 1.455em;
+	width: 1.455em;
+}
+
+.crewLeaveContent .formRowWidthInline li 
+{
+    float: left;
+}
+.crewLeaveContent  .formRowWidthInline li span {
+    padding: 0.1em 1em 0 1.7em;
+    text-decoration:none;
+    background-position: 0.417em 0.217em;
+    background-repeat: no-repeat;
+}
+/***********************Flight info Template ****************/
+.flightDetails ul{
+	width:100%;
+	float:left;	
+}
+.flightDetails li
+{
+	/*line-height:2.5em;*/
+	padding:0.605em 0em 0.605em 0.605em;
+} 
+.flightDetails li label 
+{
+	width:12em; 
+	display:inline;
+	float:left;
+}
+.commonNavLinks ul li.flightNavLinks a
+{ 
+	padding:0.5em 0.888em 0 1.3em;
+}
+.flightStatus
+{
+	line-height: 2.364em;
+}
+iframe{display:none;min-height:0px!important;min-width: 105.255em;}
+.tabH{
+min-height:0px!important;
+}
+.flightDetailLinks li{width:90px !important;}
+/***********************CrewLeave Summary Starts ****************/
+.crewLeaveContentWrapper {
+    bottom: 2em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 2em;
+}
+
+.crewLeaveContent {
+    margin: 0 auto;
+	width: 83.9em;
+} 
+
+.crewLeaveContentPanel{
+	margin:0.909em;
+} 
+.crewLeaveInfo{
+	width: 100%;
+	float: left;
+}
+
+.crewLeaveInfo ul 
+{
+	padding: 0;
+	margin: 0 auto;
+	list-style:none;
+	width: 92.5em;
+}
+
+.crewLeaveInfo > ul li 
+{
+	float: left;
+	width: auto;
+	margin:1em 0;
+	padding:0 2em;
+}
+
+.crewLeaveInfo .heading{
+	height: 3.3em;
+    margin: 0;
+    padding:.3em 1em 0 1em;
+    width: 4.5em;
+}
+.crewOverviewYears{
+	float:left;
+	font-size:15px
+}
+.crewArrowBdr:after, .crewArrowBdr:before {
+	left: 100%;
+	top: 47%;
+	border: 1px solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.crewArrowBdr:after {
+	border-width: .417em;
+	margin-top: -0.417em;
+}
+.crewArrowBdr:before {
+	border-width: .583em;
+	margin-top: -0.53em;
+}
+.crewRefresh{
+	width:2em;
+	height:1.8em;
+}
+.crewLeavePeriod{
+	height:3.7em;
+}
+
+.crewLeavePeriod .crewCalendar{
+	height: 100%;
+    width:3.7em;
+}    
+.crewLeavePeriod .crewCalendar .CalendarImg{ 	
+ 	height:2.182em;
+    width:2.182em;
+    margin:0.8em 0.69em;
+}
+
+.crewLeavePeriod input[type=button]{
+	height: 2em;
+    padding: 0 1em 0.13em;
+}
+#calendarContent .ui-datepicker-multi-3 .ui-datepicker-group{width:33.32% !important}
+.crewLeaveContent .ui-jqgrid.ui-widget input[type="button"]{
+	height:2em;
+    padding:0 .5em 0.13em;
+	margin:0 5px 0 0 !important
+}
+.personalLeave .sectionWidCrvBorder:first-child {
+	margin-top: 0px;
+}
+
+/************ Crew portal iPad support **************/
+@media only screen and (min-device-width : 1024px) {
+	body, iframe, footer, .contentWrapper, nav, .crewLeaveContent{
+		min-width: 81.091em;
+	}
+}  
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
+	body, iframe, footer, .contentWrapper, nav, .crewLeaveContent{
+		min-width: 80.091em;
+		width: 100%;
+	}
+	.crewLeavePeriod input[type=button]{
+		-webkit-appearance: none;
+		-webkit-color:#fff;
+		-webkit-background:#2064a0;
+		-webkit-border-radius:1px;
+	}
+
+	input[type=submit],input[type=button],input[type=reset]{
+		-webkit-appearance: none;
+		-webkit-border-radius: 0.099em;
+	}
+	.crewLeaveContent .ui-jqgrid.ui-widget input[type="button"]{
+		-webkit-appearance: none;
+		-webkit-background:#fff;
+		-webkit-border-radius: 0.099em;
+	}
+	footer{
+		-webkit-appearance: none;
+		bottom: 0!important;
+	}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1){ 
+body, iframe, footer, .contentWrapper, nav, .crewLeaveContent{
+		min-width: 80.091em;
+		width: 100%;
+	}
+	.crewLeavePeriod input[type=button]{
+		-webkit-color:#fff;
+		-webkit-background:#2064a0;
+		-webkit-border-radius:1px;
+	}
+
+	input[type=submit],input[type=button],input[type=reset]{
+		-webkit-appearance: none;
+		-webkit-border-radius: 0.099em;
+	}
+	.crewLeaveContent .ui-jqgrid.ui-widget input[type="button"]{
+		-webkit-appearance: none;
+		-webkit-background:#fff;
+		-webkit-border-radius: 0.099em;
+	}
+	footer{
+		-webkit-appearance: none;
+		bottom: 0!important;
+	}
+}
+/***********************CrewLeave Summary End ****************/
+/********************** Filter panel styles **********************/
+.filterFormRow {
+	margin-bottom:2px;
+	float:left;
+}
+.filterLabel{
+	padding: 0.55em 0.75em;
+}
+.subLabel{
+	padding: 0.57em 0.45em;
+}
+.filterFormRow .filterInput input[type="text"]{
+	padding: 0.6em;
+	margin: 0;
+}
+.filterFormRow .filterInput input[type="text"]:focus{
+	margin: 0;
+}
+.filterFormRow .customDropdown select{
+	padding:0 .5em 0 .3em;
+	margin:0 .32em 0 0;
+	height:100%;
+}
+.filterFormRow .customDropdown{
+	padding: 0.52em 0em;
+	float:left;
+}
+.filterFormRow  label.customDropdownLabel{
+	padding: 0.4em 0em;
+}
+.filterFormRow  .ascDes{
+	padding:0.6em 0.545em;
+	border:1px solid #4977a0;
+	float:left;
+}	
+/************************************************************* Slide pane styles *********************************************************/
+#calendarId .ui-state-disabled{
+ padding:9px;
+}
+
+#calendarId .ui-state-disabled span{
+ padding:1px !important;
+}
+
+#leftPane{
+	float: left; 
+	display: none;
+ 
+}
+#leftPane a{
+	float:left;
+	padding: 1.364em;
+	border-bottom: 1px solid #ccc;
+}
+#filterNavBtn{
+	float: left;
+	width: 3.255em;
+	position: fixed;
+	height: 100%;
+	/*top: 3.6em;*/
+	z-index: 98;
+	/* margin-top: -3px; */
+}
+.slidePane {
+    display: none;
+    height: 872px;
+    z-index: 97;
+    width: 220px;
+    overflow-x: hidden;
+    overflow-y: auto;
+	position: fixed;
+	/* top: 3.8em; parthiban*/
+}
+
+.slidePane .slidePane-inner {
+    padding: 0 0 15px;
+}
+.slidePane.right {
+    left: auto;
+    right: -260px;
+}
+.slidePane.left {
+    left: 10px;   /* -260 */
+    right: auto;
+ 
+}
+
+.slidePane ul {
+    display: block;
+    padding: 0;
+}
+.slidePane ul li {
+    display: block;
+    margin: 0;
+}
+#rightContent{
+	height:100%;
+	margin-left:0.100em;  /*3.255em; parthiban*/
+ 
+}
+body:-webkit-full-screen {
+	height: 100%!important;
+	width: 100% !important;
+}
+
+body:-moz-full-screen {
+	height: 100%!important;
+	width: 100% !important;
+}
+
+body:-ms-fullscreen {
+	height: 100%!important;
+	width: 100% !important;
+}
+
+body:full-screen { /*pre-spec */
+	height: 100%!important;
+	width: 100% !important;
+}
+
+body:fullscreen { /* spec */
+	height: 100%!important;
+	width: 100% !important;
+}
+/***************************** SearchBox styles **********************************/
+.searchBox input{
+	height: 2em !important;
+	padding-left: 0.500em  !important;
+	margin-top: 0em;
+}
+.jumpToArea select{
+	margin: 0.2em 0em 0.3em 0.5em;
+	width: 9.091em;
+}
+/**************************** warGrid custom pager ******************************/
+.toppagerdisable{
+	position:absolute !important;
+	display:block;
+	visibility:hidden;
+}
+
+.iconNextGrid{
+	background: url("../images/icons/customNextGrid.png") no-repeat;
+}
+
+.iconPrevGrid{
+	background: url("../images/icons/customPrevGrid.png") no-repeat;
+}
+
+.customPgButton{
+	height: 17px;
+	width: 7px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.custompgButtonDisabled{
+	opacity:0.3;
+	cursor:auto !important;
+}
+/*****Ops Pop up's*******/
+.zoneWrapper{
+	font-size: 11px;
+    height: 0 !important;
+    line-height: 0 !important;
+    padding: 7px 5px;
+    text-align: center;
+	cursor: pointer;
+}
+.popupInfoHeader{
+	padding:4px 0 3px;
+}
+.popupInfoHeader label{
+	padding:3px 3px 0;
+	line-height: 100%;
+}
+.popupInfoHeader label:empty { 
+	display: none !important; 
+}
+.popupInfoHeader label:first-child{ 
+	padding-left:0;
+}
+.popupInfoTable{ 
+	border-right:0; 
+	border-bottom:0px; 
+	width:100%; 
+	margin:10px 0 0
+}
+.popupInfoTable td, .popupInfoTable th{ 
+	padding:5px;
+	border-top:0; 
+	border-left:0px;
+}
+.popupInfoTable td.sepraterLabel { 
+	width:30%;
+}
+.popupInfoFooter ul{
+	padding:0.585em 0;
+	/* float:left; */
+}
+.popupInfoFooter ul li{
+	padding:0px !important;
+}
+.popupInfoFooter{
+	bottom:0;
+}
+.popupInfoFooter li a{
+	padding:0 0.909em;
+	cursor: pointer;
+}
+.flightInfoStatus {
+	padding: 0 0.525em;
+}
+.bookedPaxInfo{
+	margin-left:28px;  
+	padding: 0px 0 0 10px;
+}
+/************Transactional Screen*************/
+.rightSectionContainer, .rightSectionHeader{
+	padding:10px;
+}
+.popUpRightSectionHeader{
+	padding: 5px 5px 6px;
+}
+.popUpRightSectionShadow{
+	margin-left: -3px;
+}
+/***Filter toolbar wargrid**/
+.ui-jqgrid-htable .ui-search-table{
+	width:100%;
+}
+.ui-jqgrid-htable .ui-search-oper{
+	width:2%;
+}
+/************Manage Allocation Screen*************/
+.summaryHideShow{
+	height: 19px;
+	width: 90px;
+	float: right;
+	padding: 0.725em 0.725em 0.325em 0.725em;
+	text-align: center;
+	cursor: pointer;
+}
+.summaryHideShow:hover{
+	text-decoration: underline;
+}
+/************send or receive Message *************/
+.messageTxt{
+	font-size: 12px;
+	white-space: pre-wrap;
+	padding: 0.6em;	
+}
+/************send or receive Message *************/
+td.lastTDPadding, th.lastTDPadding{
+	padding-right: 15px !important;
+	word-break: break-all;
+}
+
+/*custom css for sort order buttons*/
+.sortOrderBtn{
+	color:#222;
+}
+/************separation of panel with  round dotted OR *************/
+.separationOR{
+	padding:3px;
+	float:right;
+	margin-left:-12px;
+	position:absolute;
+}
+/************Ribbon Find panel*************/
+input.findInput{
+	padding: 5px 3px 3px 3px;
+}
+.findArrowUp, .findArrowDown{
+	margin: 1px;
+	padding: 5px 0px;
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+.findDelete{
+	margin-top: 7px;
+	padding: 2px 4px 3px 4px;
+	margin-right: 6px;
+}
+.findCount{
+	margin-top:8px;
+}
+.keywordResults{
+	margin:3px;
+	padding: 0 5px;
+}
+/***************Tool  tip*******************/
+.tooltipPopUp {
+	position: absolute;
+	z-index: 9999;    
+	left: 27.273em;
+	top: 22.727em;
+	max-width:200px;
+	max-height:200px;
+}
+.toolTipArrow, .toolTipArrowBottom{
+	width: 0;   
+	height: 0;   
+	left: 0px;   
+	top: 0px;   
+	z-index: 9999;
+	position: relative;
+	content:" ";
+	visibility:hidden;
+}
+.tooltipContent{
+	min-width:150px;
+	padding:5px;	
+}
+/****************MinMaxBtn style****************/
+.minMaxBtn {
+	width: 15px;
+	height: 2.9em;
+	float:right;
+	cursor:pointer;
+}
+
+/********************PageButtonBlock Sub menu resolution <= 1280 *****************/
+.subButtonsBlock:after {
+	margin-left: -10px;
+	right:15px;
+}
+.subButtonsBlock:before {
+	margin-left: -11px;
+	right:14px;
+}
+.buttonBlockSubMenu {
+	display: none;
+	z-index: 5;
+	position: absolute;
+	padding: .5em;
+}
+.buttonBlockSubMenu ul li{
+	width:125px;
+	padding: 0.275em;
+}
+/* START added for check box click issue in grid refer: warGrid.js */
+.ui-jqgrid tr.ui-row-ltr td.customCheckbox{
+    text-align:center;
+}
+.customCheckbox .jaduGridChkUpLayer {
+	position: relative;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0);
+	height: 100%;
+	width:100%;
+	margin-top: -2px;
+	margin-left: 0px;
+}
+.customCheckbox .jaduGridChkContainer {
+	position: relative;
+	text-align: center;
+	padding-top: 1px;
+	height:0px;
+}
+.customCheckbox  input[type=checkbox] {
+	margin-left: 0px;
+	margin-top: 3px;
+	outline:none;
+}
+.customCheckbox input.jaduGridChk {
+	position: absolute;
+	z-index: 1;
+	margin-left: -6px;
+	left:50%;
+}
+.customCheckbox input.jaduGridChk {
+    opacity: 1;
+}
