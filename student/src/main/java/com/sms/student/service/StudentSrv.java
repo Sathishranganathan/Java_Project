@@ -8,7 +8,7 @@ public interface StudentSrv {
  StudentDTO createStudent(StudentDTO studentDTO);
  StudentDTO updateStudent(StudentDTO studentDTO);
  StudentDTO deleteStudent(StudentDTO studentDTO);
-
+ void deleteStudentByID(Long id);
  StudentDTO getStudentByID(Long id);
  List<StudentDTO> getAllStudents();
 }
