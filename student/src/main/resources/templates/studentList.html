@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+  <meta charset = "ISO-8859-1"/>
+  <title>View Students</title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link th:href="@{/css/warrior_building.css}" rel="stylesheet" />
+  <link th:href="@{/css/warrior_style.css}" rel="stylesheet" />
+  <link th:href="@{/css/styles.css}" rel="stylesheet" />
+  <!-- <script src="js/svg/svg.min.js"></script>
+   <script src="js/svg/workflowChart.js"></script>-->
+  <!--<script>
+    $(document).ready(function(){
+      $.getJSON("http://localhost:8080/getStudent", function(result){
+        $.each(result, function(key,value) {
+          //console.log("Student Record");
+          //$("#productsJson").append(value.id+" "+value.name+" ");
+
+        });
+      });
+    });
+  </script>-->
+
+</head>
+<body>
+<table class="watermark">
+  <thead>
+  <tr>
+    <th> Student ID </th>
+    <th> Student Name </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:if="${studentList.empty}">
+    <td colspan="2"> No Students Available </td>
+  </tr>
+  <tr th:each="student : ${studentList}">
+    <td><span th:text="${student.id}"> Title </span></td>
+    <td><span th:text="${student.name}"> Author </span></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
