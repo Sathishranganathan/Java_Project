@@ -1,0 +1,108 @@
+.popUpWindowHeader{
+	background: none repeat scroll 0 0 #0066CC;
+	height:25px;
+    padding: 6px 10px 7px 10px;
+}
+.popUpWindowHeader ul{
+	padding-top:4px;
+}
+.popUpWindowTitle {
+    font-size: small;
+    font-weight: 700;
+    float: left;
+	color: #fff;
+	padding-top:5px;
+}
+.popUpWindowContent {
+	display:block;
+	visibility: hidden;
+	float:left;
+}
+
+.popUpContainer {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);/*3px 3px 5px #d0d0d0;*/
+    display: none;
+    float: right;
+    margin: 0 0.455em;
+   /* border-radius:5px;*/	
+}
+/*.cornerPopUp .popUpContainer{box-shadow:-3px -3px 5px #d0d0d0 !important;border: 1px solid #d0d0d0;}*/
+
+.popUpStatus{
+background:#eee;line-height: 2.364em;border-bottom:#d8d8d8;
+}
+
+.cornerPopUp{
+	position :absolute;
+	/* bottom: 2.909em;
+	right: 0px; */
+	z-index: 98;
+}
+.modalPopUp{
+	position: absolute;
+	z-index: 99;
+	left:	27.273em;
+	top: 22.727em;
+	
+}
+.infoPopUp{
+	position: absolute;
+	z-index: 98;
+/* 	left:	27.273em;
+	top: 22.727em; */
+	
+}
+
+.commonNavLinks ul li.modalMinimizeIcon{
+	background-image: url(../images/icons/popup/modelMessage.png);
+	background-repeat: no-repeat;
+	height: 1.455em;
+	width: 1.455em;
+	cursor: pointer;
+	opacity:0.5;
+	background-position:-44px -22px !important;
+}
+
+.modalMinimizeIcon:hover,.modalMaximizeIcon:hover{
+	opacity:1 !important;
+}
+
+.commonNavLinks ul li.modalMaximizeIcon{
+	background-image: url(../images/icons/popup/modelMessage.png);
+	background-repeat: no-repeat;
+	height: 1.455em;
+	width: 1.167em;
+	cursor: pointer;
+	opacity:0.5;
+	background-position:-15px -22px !important;
+}
+
+.popUpMinWrapper{/*pupmin-wrapper*/
+	position :absolute;
+	bottom: 2.909em;
+	right: 0;
+	z-index: 98;
+	margin: 0.455em 0.455em 0;
+}
+#popUpOverlay{
+	display: none;
+	z-index: 99;
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0
+}
+.popUpOverlay
+{
+	background:#081D30;
+	opacity:.3;
+	filter:alpha(opacity=30);
+	-moz-opacity:.3;
+}
