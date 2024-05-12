@@ -1,0 +1,105 @@
+body {
+	background-color: lightGray
+}
+
+.dark {
+	background-color: black;
+	color: white;
+}
+
+.light {
+	background-color: #f1f1f1;
+	color: #ccc;
+}
+
+.iconStartGrid{
+	background: url("../images/start.jpg") no-repeat;
+}
+
+.iconStopGrid{
+	background: url("/images/start.jpg") no-repeat;
+}
+
+.btnAction{
+width: 50px !important;
+}
+
+.modalMinimizeIcon{
+	background-image: url(../images/icons/popup/modelMessage.png);
+	background-repeat: no-repeat;
+	height: 1.455em;
+	width: 1.455em;
+	cursor: pointer;
+	opacity:0.5;
+	background-position:-44px -22px !important;
+}
+
+#leftPane{
+	float: left;
+	display: block !important;
+	border:1px solid green;
+}
+
+.slidePaneShadow{
+border:1px solid red;
+}
+
+.filterFormRow {
+    margin-bottom: 2px;
+    float: left;
+    border:1px solid red;
+}
+
+
+.filterBrdr {
+    border: 1px solid #d2d2d2;
+    padding: 2.545em!important;
+}
+.clearfloat {
+    clear: both;
+    height: 0;
+}
+
+#rightContent {
+    height: 100%;
+    margin-left: 0.1em;
+    border: 1px solid #d2d2d2;
+}
+
+.width385Imp {
+    width: 52em !important;
+}
+
+.pdng5Imp {
+    padding: 1.545em!important;
+}
+
+.srcPositionIcon{
+	background-image: url(../images/icons/common_normal.png);
+	background-repeat: no-repeat;
+	height: 1.455em;
+	width: 1.455em;
+	cursor: pointer;
+	/*opacity:0.5;*/
+	background-position: -48px -585px !important;
+}
+
+.destPositionIcon{
+	background-image: url(../images/icons/common_normal.png);
+	background-repeat: no-repeat;
+	height: 1.455em;
+	width: 1.455em;
+	cursor: pointer;
+	/*opacity:0.5;*/
+	background-position: -48px -585px !important;
+}
+
+.station_robo{
+    background-image: url(../images/icons/common_normal.png);
+	background-repeat: no-repeat;
+	height: 1.455em;
+	width: 1.455em;
+	cursor: pointer;
+	/*opacity:0.5;*/
+	background-position: -659px -173px !important;
+}
