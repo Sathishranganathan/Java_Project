@@ -1,8 +1,11 @@
 package com.sms.student.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.LocalDate;
 import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,11 +23,9 @@ public class Student {
     @Column(name="name", nullable = false)
     private String name;
 
-    /*@Column(name="DoB", columnDefinition ="DATE")
-    private Date dob;*/
-
-    @Column(name="DoB")
-    private String dob;
+    @Column(name="DoB", columnDefinition ="DATE")
+     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+    private LocalDate dob;
 
     @Column(name="gender", nullable=false)
     private String gender;

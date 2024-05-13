@@ -1,9 +1,9 @@
 package com.sms.student.dto;
 
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -16,12 +16,10 @@ public class StudentDTO {
     private Long id;
 
     private String name;
+    
+    private LocalDate dob;
 
-    //private Date dob;
-
-    private String dob;
-
-    private String gender;
+   private String gender;
 
     private String std;
 }

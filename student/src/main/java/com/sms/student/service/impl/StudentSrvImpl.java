@@ -3,18 +3,15 @@ package com.sms.student.service.impl;
 import com.sms.student.dto.StudentDTO;
 import com.sms.student.exception.CustomerAlreadyExistsException;
 import com.sms.student.exception.ResourceNotFoundException;
-import com.sms.student.mapper.StudentMapper;
 import com.sms.student.model.Student;
 import com.sms.student.repository.StudentRepository;
 import com.sms.student.service.StudentSrv;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import lombok.extern.slf4j.XSlf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static java.util.stream.Collectors.toList;
 
 @Service
 @AllArgsConstructor
@@ -56,6 +53,7 @@ public class StudentSrvImpl implements StudentSrv {
         log.info("getStudentByID method invoked");
         Student student  = studentRepository.findById(id)
                 .orElseThrow( ()-> new ResourceNotFoundException("Student is not found for the given id" + id));
+        log.info("getStudentByID method end");
         return this.mapToStudentDTO(student);
     }
 
@@ -66,7 +64,7 @@ public class StudentSrvImpl implements StudentSrv {
     public List<StudentDTO> getAllStudents() {
         log.info("getAllStudents method invoked");
         List<Student> students = studentRepository.findAll();
-        log.info("getAllEmployee total : {} ",students.size());
+        log.info("getAllStudents total : {} ",students.size());
         return students.stream().map(this::mapToStudentDTO).toList();
     }
 
@@ -103,13 +101,20 @@ public class StudentSrvImpl implements StudentSrv {
 
     //log.info("Model to DTO");
     public StudentDTO mapToStudentDTO(Student student) {
+        log.info("mapToStudentDTO {} ",student.getDob());
+         
+
         return StudentDTO.builder().id(student.getId()).name(student.getName())
                 .gender(student.getGender()).dob(student.getDob()).std(student.getStd()).build();
     }
 
     //log.info("DTO to Model");
     public Student mapToStudent(StudentDTO studentDTO) {
+        log.info("mapToStudent {} ",studentDTO.getDob());
+        
+       
         return Student.builder().id(studentDTO.getId()).name(studentDTO.getName())
                 .gender(studentDTO.getGender()).dob(studentDTO.getDob()).std(studentDTO.getStd()).build();
     }
 }
+

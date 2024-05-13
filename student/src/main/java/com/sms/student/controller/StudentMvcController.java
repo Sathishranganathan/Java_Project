@@ -27,17 +27,17 @@ public class StudentMvcController {
         List<StudentDTO> studentDtoList = studentSrv.getAllStudents();
         //log.info("studentDtoList size is {} ",studentDtoList.size());
         model.addAttribute("studentList", studentDtoList);
-        return "index";
+        return "studentList";
     }
 
     @GetMapping("/viewStudent/{id}")
     public String viewStudent(@PathVariable(value = "id") long id, Model model) {
-        log.info("showFormForUpdate method invoked");
+        log.info("viewStudent method invoked");
         StudentDTO studentDTO;
         try {
             studentDTO = studentSrv.getStudentByID(id);
             model.addAttribute("studentDTO", studentDTO);
-            log.info("showFormForUpdate {} ", studentDTO.getStd());
+            log.info("viewStudent {} ", studentDTO.getStd());
             //throw new NullPointerException("Data not found");
         } catch (ResourceNotFoundException e) {
             model.addAttribute("exception", e.getMessage());
